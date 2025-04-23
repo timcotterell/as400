@@ -1,0 +1,26 @@
+PGM
+
+DCL VAR(&SRCFILE) TYPE(*CHAR) LEN(20) VALUE('MYLIB/QRPGLESRC')
+
+/* Compile main scheduler */
+CRTBNDRPG PGM(MYLIB/SCHEDULER_MAIN) +
+          SRCFILE(&SRCFILE) +
+          SRCMBR(SCHEDULER_MAIN) +
+          DFTACTGRP(*NO) +
+          ACTGRP(*CALLER)
+
+/* Compile job loader */
+CRTBNDRPG PGM(MYLIB/JOB_LOADER) +
+          SRCFILE(&SRCFILE) +
+          SRCMBR(JOB_LOADER) +
+          DFTACTGRP(*NO) +
+          ACTGRP(*CALLER)
+
+/* Compile job runner */
+CRTBNDRPG PGM(MYLIB/JOB_RUNNER) +
+          SRCFILE(&SRCFILE) +
+          SRCMBR(JOB_RUNNER) +
+          DFTACTGRP(*NO) +
+          ACTGRP(*CALLER)
+
+ENDPGM

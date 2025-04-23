@@ -1,0 +1,7 @@
+[2025-04-23 08:00:01] Job 'Daily Cleanup' started.
+[2025-04-23 08:00:01] Command: DLTF FILE(QTEMP/TEMPFILE)
+[2025-04-23 08:00:02] Job 'Daily Cleanup' completed successfully.
+
+[2025-04-23 09:00:00] Job 'Rebuild Inventory Index' started.
+[2025-04-23 09:00:00] Command: RUNQRY QRY(MYLIB/REBUILD_INV)
+[2025-04-23 09:00:03] Job 'Rebuild Inventory Index' completed successfully.
